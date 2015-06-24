@@ -1,0 +1,21 @@
+{
+    "name": "dixonsatit/yii2-thai-year-formatter",
+    "description": "Convert Year to Thai Buddhist Era Year",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "satit seethaphon",
+            "email": "dixonsatit@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "dixonsatit\\thaiYearFormatter\\": ""
+        }
+    }
+}
