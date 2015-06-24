@@ -48,12 +48,26 @@ echo Yii::$app->formatter->asDate($time, 'short')."<br>";
 echo Yii::$app->formatter->asDate($time, 'medium')."<br>";
 echo Yii::$app->formatter->asDate($time, 'long')."<br>";
 echo Yii::$app->formatter->asDate($time, 'full')."<br>";
-echo '<hr>';
-echo Yii::$app->formatter->locale = 'th';
+
+Yii::$app->formatter->locale = 'th';
 echo Yii::$app->formatter->asDate($time, 'short')."<br>";
 echo Yii::$app->formatter->asDate($time, 'medium')."<br>";
 echo Yii::$app->formatter->asDate($time, 'long')."<br>";
 echo Yii::$app->formatter->asDate($time, 'full')."<br>";
 
+```
+
+preview
+
+```
+6/25/15
+Jun 25, 2015
+June 25, 2015
+Thursday, June 25, 2015
+
+25/6/2558
+25 มิ.ย. 2558
+25 มิถุนายน 2558
+วันอาทิตย์ที่ 25 มิถุนายน ค.ศ. 2558
 ```
 
