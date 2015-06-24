@@ -4,6 +4,11 @@
     "type": "yii2-extension",
     "keywords": ["yii2","extension"],
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/dixonsatit/yii2-thai-year-formatter/issues",
+        "wiki": "https://github.com/dixonsatit/yii2-thai-year-formatter/wiki",
+        "source": "https://github.com/dixonsatit/yii2-thai-year-formatter"
+    },
     "authors": [
         {
             "name": "satit seethaphon",
