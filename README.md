@@ -25,7 +25,7 @@ Config
 ------
 
 ```
-//'language'=>'th', //  uncomment  if you want set default language to th
+//'language'=>'th', // เปิดใช้งานภาษาไทยหากต้องการเป็นค่า default
 'components' => [
 	//...
     'formatter'=>[
@@ -37,7 +37,7 @@ Config
 Usage
 -----
 
-Once the extension is installed, simply use it in your code by  :
+เรียกใช้งานผ่าน component `formatter`
 
 
 ```php
@@ -57,7 +57,7 @@ echo Yii::$app->formatter->asDate($time, 'full')."<br>";
 
 ```
 
-preview
+Preview
 
 ```
 6/25/15
