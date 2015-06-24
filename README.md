@@ -1,6 +1,6 @@
 ThaiYearFormatter
 =================
-Convert Year to Thai Buddhist Era Year
+Convert Year to Thai Buddhist Era 
 
 Installation
 ------------
