@@ -43,6 +43,7 @@ Once the extension is installed, simply use it in your code by  :
 ```php
 $time = time();
 
+// asDate
 Yii::$app->formatter->locale = 'en-US';
 echo Yii::$app->formatter->asDate($time, 'short')."<br>";
 echo Yii::$app->formatter->asDate($time, 'medium')."<br>";
@@ -54,6 +55,19 @@ echo Yii::$app->formatter->asDate($time, 'short')."<br>";
 echo Yii::$app->formatter->asDate($time, 'medium')."<br>";
 echo Yii::$app->formatter->asDate($time, 'long')."<br>";
 echo Yii::$app->formatter->asDate($time, 'full')."<br>";
+
+// asDateTime
+Yii::$app->formatter->locale = 'en-US';
+echo Yii::$app->formatter->asDateTime($time, 'short')."<br>";
+echo Yii::$app->formatter->asDateTime($time, 'medium')."<br>";
+echo Yii::$app->formatter->asDateTime($time, 'long')."<br>";
+echo Yii::$app->formatter->asDateTime($time, 'full')."<br>";
+
+Yii::$app->formatter->locale = 'th';
+echo Yii::$app->formatter->asDateTime($time, 'short')."<br>";
+echo Yii::$app->formatter->asDateTime($time, 'medium')."<br>";
+echo Yii::$app->formatter->asDateTime($time, 'long')."<br>";
+echo Yii::$app->formatter->asDateTime($time, 'full')."<br>";
 
 ```
 
@@ -69,5 +83,16 @@ Thursday, June 25, 2015
 25 มิ.ย. 2558
 25 มิถุนายน 2558
 วันอาทิตย์ที่ 25 มิถุนายน ค.ศ. 2558
+
+
+6/25/15 9:57 AM
+Jun 25, 2015 9:57:18 AM
+June 25, 2015 9:57:18 AM GMT+07:00
+Thursday, June 25, 2015 9:57:18 AM Indochina Time
+
+25/6/2558, 9:57
+25 มิ.ย. 2558, 9:57:18
+25 มิถุนายน 2558, 9 นาฬิกา 57 นาที 18 วินาที GMT+07:00
+วันอาทิตย์ที่ 25 มิถุนายน ค.ศ. 2558, 9 นาฬิกา 57 นาที 18 วินาที GMT+07:00
 ```
 
