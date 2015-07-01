@@ -1,9 +1,9 @@
 <?php
  /**
    * ThaiYearFormatter
-   * 
+   *
    * Convert Year to Thai Buddhist Era Year
-   * 
+   *
    * @package    dixonsatit
    * @subpackage thaiYearFormatter
    * @author     Satit Seethaphon <dixonsatit@gmail.com>
@@ -149,7 +149,7 @@ class ThaiYearFormatter extends Formatter{
                 $timestamp = $this->setThaiYear($timestamp);
                 return $checkTimeInfo ? [$timestamp, false] : $timestamp;
             } elseif (($timestamp = DateTime::createFromFormat('Y-m-d H:i:s', $value, new DateTimeZone($this->defaultTimeZone))) !== false) { // try Y-m-d H:i:s format (support invalid dates like 2012-13-01 12:63:12)
-                
+
                 $timestamp = $this->setThaiYear($timestamp);
                 return $checkTimeInfo ? [$timestamp, true] : $timestamp;
             }
@@ -168,13 +168,11 @@ class ThaiYearFormatter extends Formatter{
     }
 
     public function setThaiYear(DateTime $timestamp){
-        if(strtolower($this->locale) === 'th'){
+        if(strtolower($this->locale) === 'th' || $this->locale == 'th_TH'){
             return $timestamp->setDate(($timestamp->format('Y')+543),$timestamp->format('m'),$timestamp->format('d'));
         }else{
             return $timestamp;
         }
-        
+
     }
 }
-
-
