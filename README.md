@@ -1,6 +1,6 @@
 ThaiYearFormatter
 =================
-Convert Year to Thai Buddhist Era 
+Convert Year to Thai Buddhist Era
 
 Installation
 ------------
@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist dixonsatit/yii2-thai-year-formatter "*"
+php composer.phar require --prefer-dist dixonsatit/yii2-thai-year-formatter "0.9.6"
 ```
 
 or add
 
 ```
-"dixonsatit/yii2-thai-year-formatter": "*"
+"dixonsatit/yii2-thai-year-formatter": "0.9.6"
 ```
 
 to the require section of your `composer.json` file.
@@ -95,4 +95,3 @@ Thursday, June 25, 2015 9:57:18 AM Indochina Time
 25 มิถุนายน 2558, 9 นาฬิกา 57 นาที 18 วินาที GMT+07:00
 วันอาทิตย์ที่ 25 มิถุนายน ค.ศ. 2558, 9 นาฬิกา 57 นาที 18 วินาที GMT+07:00
 ```
-
