@@ -57,7 +57,7 @@ class ThaiYearFormatter extends Formatter{
          if ($format === null) {
             $format = $this->dateFormat;
         }
-        return $this->formatDateTimeValue($value, $format, 'date');
+        return $this->replateYear($this->formatDateTimeValue($value, $format, 'date'));
     }
 
     public function asDatetime($value, $format = null)
@@ -65,7 +65,7 @@ class ThaiYearFormatter extends Formatter{
         if ($format === null) {
             $format = $this->datetimeFormat;
         }
-        return $this->formatDateTimeValue($value, $format, 'datetime');
+        return $this->replateYear($this->formatDateTimeValue($value, $format, 'datetime'));
     }
 
     private function formatDateTimeValue($value, $format, $type)
@@ -168,11 +168,20 @@ class ThaiYearFormatter extends Formatter{
     }
 
     public function setThaiYear(DateTime $timestamp){
-        if(strtolower($this->locale) === 'th' || $this->locale == 'th_TH'){
+        if($this->checkThaiLocale()){
             return $timestamp->setDate(($timestamp->format('Y')+543),$timestamp->format('m'),$timestamp->format('d'));
         }else{
             return $timestamp;
         }
+    }
 
+    public function replateYear($strDate)
+    {
+      return strtr($strDate,'ค.ศ.','พ.ศ.');
+    }
+
+    public function checkThaiLocale()
+    {
+      return (strtolower($this->locale) === 'th' || $this->locale == 'th_TH');
     }
 }
