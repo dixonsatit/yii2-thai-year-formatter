@@ -27,7 +27,7 @@ class ThaiYearFormatter extends Formatter{
         'full'   => 0, // IntlDateFormatter::FULL,
     ];
 
-      public function init()
+    public function init()
     {
         if ($this->timeZone === null) {
             $this->timeZone = Yii::$app->timeZone;
@@ -54,10 +54,10 @@ class ThaiYearFormatter extends Formatter{
 
 
     public function asDate($value, $format = null){
-         if ($format === null) {
+        if ($format === null) {
             $format = $this->dateFormat;
         }
-        return $this->replateYear($this->formatDateTimeValue($value, $format, 'date'));
+        return $this->replaceYear($this->formatDateTimeValue($value, $format, 'date'));
     }
 
     public function asDatetime($value, $format = null)
@@ -65,7 +65,7 @@ class ThaiYearFormatter extends Formatter{
         if ($format === null) {
             $format = $this->datetimeFormat;
         }
-        return $this->replateYear($this->formatDateTimeValue($value, $format, 'datetime'));
+        return $this->replaceYear($this->formatDateTimeValue($value, $format, 'datetime'));
     }
 
     private function formatDateTimeValue($value, $format, $type)
@@ -166,7 +166,10 @@ class ThaiYearFormatter extends Formatter{
                 . "\n" . print_r(DateTime::getLastErrors(), true), $e->getCode(), $e);
         }
     }
-
+    /**
+     * [setThaiYear description]
+     * @param DateTime $timestamp [description]
+     */
     public function setThaiYear(DateTime $timestamp){
         if($this->checkThaiLocale()){
             return $timestamp->setDate(($timestamp->format('Y')+543),$timestamp->format('m'),$timestamp->format('d'));
@@ -174,12 +177,19 @@ class ThaiYearFormatter extends Formatter{
             return $timestamp;
         }
     }
-
-    public function replateYear($strDate)
+    /**
+     * replace Year
+     * @param  string $strDate
+     * @return string date
+     */
+    public function replaceYear($strDate)
     {
-      return strtr($strDate,'ค.ศ.','พ.ศ.');
+      return str_replace('ค.ศ.','พ.ศ.',$strDate);
     }
-
+    /**
+     * check is Thai Locale
+     * @return string date
+     */
     public function checkThaiLocale()
     {
       return (strtolower($this->locale) === 'th' || $this->locale == 'th_TH');
