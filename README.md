@@ -2,8 +2,24 @@ ThaiYearFormatter
 =================
 แปลงค่าวันที่ เป็นปีภาษาไทย
 
-การติดตั้ง
+>  ThaiYearFormatter จำเป็นต้องเปิดการใช้งาน  php extension intl  ใน php.ini
+
+เปิดไฟล์ php.ini แล้วเปิดใช้งาน ดังนี้
+```
+extension=php_intl.dll
+
+[intl]
+intl.default_locale =th_TH.UTF-8
+; This directive allows you to produce PHP errors when some error
+; happens within intl functions. The value is the level of the error produced.
+; Default is 0, which does not produce any errors.
+;intl.error_level = E_WARNING
+```
+
+หากยังไม่มีให้ติดตั้งที่ server [ดูที่นี่](http://php.net/manual/en/intl.installation.php)
+
 ------------
+[ที่มา  http://stackoverflow.com/questions/3191664/list-of-all-locales-and-their-short-codes](http://stackoverflow.com/questions/3191664/list-of-all-locales-and-their-short-codes)
 
 ```
 composer require --prefer-dist dixonsatit/yii2-thai-year-formatter "0.9.6"
