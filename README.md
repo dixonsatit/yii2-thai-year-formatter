@@ -21,6 +21,9 @@ intl.default_locale =th_TH.UTF-8
 ------------
 [ที่มา  http://stackoverflow.com/questions/3191664/list-of-all-locales-and-their-short-codes](http://stackoverflow.com/questions/3191664/list-of-all-locales-and-their-short-codes)
 
+การติดตั้ง
+------
+
 ```
 composer require --prefer-dist dixonsatit/yii2-thai-year-formatter "0.9.6"
 ```
@@ -32,7 +35,7 @@ composer require --prefer-dist dixonsatit/yii2-thai-year-formatter "0.9.6"
 ```
 หลังจากนั้น รันคำสั่ง `composer update`
 
-Config
+การตั้งค่า
 ------
 
 ```
