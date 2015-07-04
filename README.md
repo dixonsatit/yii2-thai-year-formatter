@@ -1,6 +1,6 @@
 ThaiYearFormatter
 =================
-แปลงค่าวันที่ เป็นปีภาษาไทย
+แปลงค่าวันที่ เป็นปีภาษาไทย สำหรับ Yii framework (Yii 2)
 
 >  ThaiYearFormatter จำเป็นต้องเปิดการใช้งาน  php extension intl  ใน php.ini
 
