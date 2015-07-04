@@ -39,7 +39,7 @@ composer require --prefer-dist dixonsatit/yii2-thai-year-formatter "0.9.6"
 ------
 
 ```
-//'language'=>'th_TH', // เปิดใช้งานภาษาไทยหากต้องการเป็นค่า default
+'language'=>'th_TH', // เปิดใช้งานภาษาไทย
 'components' => [
 	//...
     'thaiFormatter'=>[
@@ -69,7 +69,7 @@ echo Yii::$app->thaiFormatter->asDateTime($time, 'full')."<br>";
 
 ```
 
-Preview
+แสดงผล
 
 ```
 
