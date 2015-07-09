@@ -192,6 +192,6 @@ class ThaiYearFormatter extends Formatter{
      */
     public function checkThaiLocale()
     {
-      return (strtolower($this->locale) === 'th' || $this->locale == 'th_TH');
+      return (strtolower($this->locale) === 'th' || $this->locale == 'th_TH' || $this->locale == 'th-TH');
     }
 }
