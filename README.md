@@ -25,13 +25,13 @@ intl.default_locale =th_TH.UTF-8
 ------
 
 ```
-composer require --prefer-dist dixonsatit/yii2-thai-year-formatter "0.9.6"
+composer require --prefer-dist dixonsatit/yii2-thai-year-formatter "*"
 ```
 
 หรือเพิ่มที่ ไฟล์ composer.json ในส่วน require
 
 ```
-"dixonsatit/yii2-thai-year-formatter": "0.9.6"
+"dixonsatit/yii2-thai-year-formatter": "*"
 ```
 หลังจากนั้น รันคำสั่ง `composer update`
 
